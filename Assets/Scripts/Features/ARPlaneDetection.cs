@@ -5,6 +5,9 @@ using UnityEngine.XR.ARFoundation;
 [RequireComponent(typeof(ARPlaneManager))]
 public class ARPlaneDetection : MonoBehaviour
 {
+    [SerializeField]
+    private bool showPlaneTrackableLog = true;
+
     private ARPlaneManager planeManager;
 
     private void Awake()
@@ -31,6 +34,8 @@ public class ARPlaneDetection : MonoBehaviour
 
     private void DisplayPlanesChanged(string action, IEnumerable<ARPlane> planes)
     {
+        if (!showPlaneTrackableLog) return;
+
         foreach (ARPlane plane in planes)
         {
             Logger.Instance.LogInfo($"{action}: AR Plane trackableId: {plane.trackableId}");
