@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
@@ -24,6 +25,9 @@ public class ARLightEstimation : MonoBehaviour
 
     private Color? colorCorrection;
 
+    [SerializeField]
+    private GameObject worldSpaceObject;
+
     private void Awake()
     {
         arLight = FindObjectOfType<Light>();
@@ -35,11 +39,13 @@ public class ARLightEstimation : MonoBehaviour
     private void OnEnable()
     {
         arCameraManager.frameReceived += FrameReceived;
+        Application.onBeforeRender += OnBeforeRender;
     }
 
     private void OnDisable()
     {
         arCameraManager.frameReceived -= FrameReceived;
+        Application.onBeforeRender -= OnBeforeRender;
     }
 
     private void FrameReceived(ARCameraFrameEventArgs obj)
@@ -69,5 +75,16 @@ public class ARLightEstimation : MonoBehaviour
         averageBrightnessText.text = $"Average Brightness: {(!brightness.HasValue ? "Not Set" : brightness.Value)}";
         colorTemperatureText.text = $"Color Temperature: {(!colorTemperature.HasValue ? "Not Set" : colorTemperature.Value)}";
         colorCorrectionText.text = $"Color Correction: {(!colorCorrection.HasValue ? "Not Set" : colorCorrection.Value)}";
+    }
+
+
+    void OnBeforeRender()
+    {
+        var camera = FindObjectOfType<XROrigin>().Camera;
+
+        if (camera && worldSpaceObject)
+        {
+            worldSpaceObject.transform.position = camera.transform.position + camera.transform.forward;
+        }
     }
 }
