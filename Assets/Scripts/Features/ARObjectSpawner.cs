@@ -19,18 +19,32 @@ public class ARObjectSpawner : MonoBehaviour
 
     private GameObject objectSpawned;
 
+    private InputAction pressAction;
+
     private void Awake()
     {
-        raycastManager = GetComponent<ARRaycastManager>();    
+        raycastManager = GetComponent<ARRaycastManager>();
+        pressAction = new InputAction("touch", binding: "<Pointer>/press");        
+    }
+    private void OnEnable()
+    {
+        pressAction.Enable();
+    }
+
+    private void OnDisable()
+    {
+        pressAction.Disable();
     }
 
     private void Update()
     {
         var touchPosition = Pointer.current.position.ReadValue();
-        Logger.Instance.LogInfo($"Touch Position: {touchPosition}");
-        if (raycastManager.Raycast(touchPosition, hits, trackableTypeToIncludeInRay))
+
+        if (raycastManager.Raycast(touchPosition, hits, trackableTypeToIncludeInRay)
+            && pressAction.IsPressed())
         {
             var hitPose = hits[0].pose;
+            Logger.Instance.LogInfo($"Ray hit with pose: {hitPose}");
 
             if (objectSpawned == null)
             {
