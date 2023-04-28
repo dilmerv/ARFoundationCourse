@@ -27,11 +27,9 @@ public class ARLightEstimation : MonoBehaviour
     private void Awake()
     {
         arLight = FindObjectOfType<Light>();
-        PopulateLightEstimateValues();
-    }
+        arCameraManager = FindObjectOfType<ARCameraManager>();
 
-    private void Start()
-    {
+        PopulateLightEstimateValues();
     }
 
     private void OnEnable()
