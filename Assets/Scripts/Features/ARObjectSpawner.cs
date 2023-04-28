@@ -46,7 +46,6 @@ public class ARObjectSpawner : MonoBehaviour
         if (raycastManager.Raycast(touchPosition, hits, trackableTypeToIncludeInRay))
         {
             var hitPose = hits[0].pose;
-            Logger.Instance.LogInfo($"Ray hit with pose: {hitPose}");
 
             if (objectSpawned == null)
             {
