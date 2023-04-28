@@ -649,10 +649,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1400098873}
   - component: {fileID: 1400098872}
+  - component: {fileID: 1400098877}
+  - component: {fileID: 1400098876}
   - component: {fileID: 1400098875}
   - component: {fileID: 1400098874}
-  - component: {fileID: 1400098876}
-  - component: {fileID: 1400098877}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -702,25 +702,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400098871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c5e6cc372564704391168551cb602bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PlanePrefab: {fileID: 4595770842021241826, guid: 12af1049c6b3b534398a757e7eece35e, type: 3}
-  m_DetectionMode: -1
+  objectToSpawn: {fileID: 2553517433107630445, guid: 3d73cf8641f4c614fa83798050f60fbe, type: 3}
+  trackableTypeToIncludeInRay: 31
 --- !u!114 &1400098875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1400098871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab0e80cee9cc1d44928bfe488dd1e2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_PointCloudPrefab: {fileID: 3437612798924989913, guid: 6da4dca816650b3418ef9a55d9eeb72a, type: 3}
---- !u!114 &1400098876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -733,6 +720,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RaycastPrefab: {fileID: 0}
+--- !u!114 &1400098876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400098871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab0e80cee9cc1d44928bfe488dd1e2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PointCloudPrefab: {fileID: 3437612798924989913, guid: 6da4dca816650b3418ef9a55d9eeb72a, type: 3}
 --- !u!114 &1400098877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -742,8 +742,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1400098871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c5e6cc372564704391168551cb602bb, type: 3}
+  m_Script: {fileID: 11500000, guid: e1760703bbd54c04488a8d10600262ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 2553517433107630445, guid: 3d73cf8641f4c614fa83798050f60fbe, type: 3}
-  trackableTypeToIncludeInRay: 31
+  m_PlanePrefab: {fileID: 4595770842021241826, guid: 12af1049c6b3b534398a757e7eece35e, type: 3}
+  m_DetectionMode: -1

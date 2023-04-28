@@ -38,10 +38,12 @@ public class ARObjectSpawner : MonoBehaviour
 
     private void Update()
     {
+        var isPressed = pressAction.IsPressed();
+        if (!isPressed) return;
+
         var touchPosition = Pointer.current.position.ReadValue();
 
-        if (raycastManager.Raycast(touchPosition, hits, trackableTypeToIncludeInRay)
-            && pressAction.IsPressed())
+        if (raycastManager.Raycast(touchPosition, hits, trackableTypeToIncludeInRay))
         {
             var hitPose = hits[0].pose;
             Logger.Instance.LogInfo($"Ray hit with pose: {hitPose}");
