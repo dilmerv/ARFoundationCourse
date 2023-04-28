@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: ec7bbff615979c747b5a02c82bc2c92b
   - enabled: 1
     path: Assets/Scenes/ARPointClouds.unity
-    guid: cfabe6af5ff750d43802fe93a9bdb8a2
+    guid: 44d150bca9ededb49b0833e1d6f2f0d9
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c3eb4e410569e5444955fd65d12702e2, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ba5b8cec7586e1449a22192ae6808910, type: 2}

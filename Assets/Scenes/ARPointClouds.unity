@@ -702,4 +702,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ab0e80cee9cc1d44928bfe488dd1e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PointCloudPrefab: {fileID: 2283441079658613572, guid: 6da4dca816650b3418ef9a55d9eeb72a, type: 3}
+  m_PointCloudPrefab: {fileID: 3437612798924989913, guid: 6da4dca816650b3418ef9a55d9eeb72a, type: 3}
