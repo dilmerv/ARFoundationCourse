@@ -15,6 +15,10 @@ public class ARLightEstimation : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI colorCorrectionText;
 
+    [Header("Mappings")]
+    [SerializeField]
+    private GameObject worldSpaceObject;
+
     private Light arLight;
 
     private ARCameraManager arCameraManager;
@@ -24,9 +28,6 @@ public class ARLightEstimation : MonoBehaviour
     private float? colorTemperature;
 
     private Color? colorCorrection;
-
-    [SerializeField]
-    private GameObject worldSpaceObject;
 
     private void Awake()
     {
@@ -77,8 +78,7 @@ public class ARLightEstimation : MonoBehaviour
         colorCorrectionText.text = $"Color Correction: {(!colorCorrection.HasValue ? "Not Set" : colorCorrection.Value)}";
     }
 
-
-    void OnBeforeRender()
+    private void OnBeforeRender()
     {
         var camera = FindObjectOfType<XROrigin>().Camera;
 
