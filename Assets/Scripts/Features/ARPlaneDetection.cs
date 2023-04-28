@@ -33,7 +33,7 @@ public class ARPlaneDetection : MonoBehaviour
     {
         foreach (ARPlane plane in planes)
         {
-            Logger.Instance.LogInfo($"{action}: AR Plane tracckableId: {plane.trackableId}");
+            Logger.Instance.LogInfo($"{action}: AR Plane trackableId: {plane.trackableId}");
         }
     }
 }
