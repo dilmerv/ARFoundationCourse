@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
@@ -39,7 +40,8 @@ public class ARObjectSpawner : MonoBehaviour
     private void Update()
     {
         var isPressed = pressAction.IsPressed();
-        if (!isPressed) return;
+        // make sure we're touching the screen and pointer is currently not over UI
+        if (!isPressed || EventSystem.current.IsPointerOverGameObject()) return;
 
         var touchPosition = Pointer.current.position.ReadValue();
 
