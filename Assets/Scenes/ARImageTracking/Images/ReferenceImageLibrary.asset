@@ -26,7 +26,7 @@ MonoBehaviour:
     m_Size: {x: 0.13758333, y: 0.07725833}
     m_SpecifySize: 1
     m_Name: UnityLogo
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 623fdb9023ba8974e85f48fdec787bbe, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4846638650839865120
       m_GuidHigh: 7668366801806249403
@@ -36,7 +36,7 @@ MonoBehaviour:
     m_Size: {x: 0.1375833, y: 0.1375833}
     m_SpecifySize: 1
     m_Name: LegoLogo
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 417007efff8519f4d8d0cf184e058b92, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 5455884446264024908
       m_GuidHigh: 5443173219356280505
@@ -46,7 +46,7 @@ MonoBehaviour:
     m_Size: {x: 0.1375833, y: 0.045772906}
     m_SpecifySize: 1
     m_Name: LearnXRLogo
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: 2293fe73c3b92a94aab896ce70f0f254, type: 3}
   - m_SerializedGuid:
       m_GuidLow: 4722417345692357668
       m_GuidHigh: 1461935252015255181
@@ -56,4 +56,4 @@ MonoBehaviour:
     m_Size: {x: 0.079375, y: 0.079375}
     m_SpecifySize: 1
     m_Name: QRCode
-    m_Texture: {fileID: 0}
+    m_Texture: {fileID: 2800000, guid: d2ab3110067d54045abf473cc3c94bc8, type: 3}
