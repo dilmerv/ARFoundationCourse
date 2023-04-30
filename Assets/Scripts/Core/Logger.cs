@@ -3,6 +3,7 @@ using DilmerGames.Core.Singletons;
 using TMPro;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class Logger : Singleton<Logger>
 {
@@ -15,6 +16,10 @@ public class Logger : Singleton<Logger>
     [SerializeField]
     private int maxLines = 15;
 
+    private Button toggleButton;
+
+    private bool visibility;
+
     void Awake()
     {
         if (debugAreaText == null)
@@ -22,6 +27,12 @@ public class Logger : Singleton<Logger>
             debugAreaText = GetComponent<TextMeshProUGUI>();
         }
         debugAreaText.text = string.Empty;
+
+        toggleButton = GetComponentInChildren<Button>();
+        toggleButton.onClick.AddListener(() =>
+        {
+            visibility = !visibility;
+        });
     }
 
     void OnEnable()
