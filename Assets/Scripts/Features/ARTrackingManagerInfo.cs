@@ -19,8 +19,11 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
     {
         Logger.Instance.LogWarning($"Image tracking awake...");
 
-        if(trackedImageManager.subsystem == null)
+        if (trackedImageManager.subsystem == null)
+        {
             Logger.Instance.LogWarning($"Image tracking is NOT supported :(");
+            return;
+        }
 
         if (!trackedImageManager.descriptor.supportsImageValidation)
             Logger.Instance.LogWarning($"No supported: supportsImageValidation");

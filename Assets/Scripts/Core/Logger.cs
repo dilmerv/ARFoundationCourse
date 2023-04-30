@@ -4,7 +4,9 @@ using TMPro;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(EventSystem))]
 public class Logger : Singleton<Logger>
 {
     [SerializeField]
@@ -16,9 +18,12 @@ public class Logger : Singleton<Logger>
     [SerializeField]
     private int maxLines = 15;
 
+    // logger toggle functionality
+    private Transform loggerContainer;
+
     private Button toggleButton;
 
-    private bool visibility;
+    private bool isVisible = true;
 
     void Awake()
     {
@@ -27,11 +32,19 @@ public class Logger : Singleton<Logger>
             debugAreaText = GetComponent<TextMeshProUGUI>();
         }
         debugAreaText.text = string.Empty;
+        
+        // get logger container
+        var loggerContainer = transform.GetChild(0);
 
         toggleButton = GetComponentInChildren<Button>();
         toggleButton.onClick.AddListener(() =>
         {
-            visibility = !visibility;
+            isVisible = !isVisible;
+            if(loggerContainer != null)
+                loggerContainer.gameObject.SetActive(isVisible);
+
+            toggleButton.GetComponentInChildren<TextMeshProUGUI>()
+                .text = isVisible ? "Hide Log" : "Show Log";
         });
     }
 
