@@ -10,11 +10,14 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
 
     private ARTrackedImageManager trackedImageManager;
 
+    private void Awake()
+    {
+        trackedImageManager = GetComponent<ARTrackedImageManager>();
+    }
+
     private void Start()
     {
         Logger.Instance.LogWarning($"Image tracking awake...");
-
-        trackedImageManager = GetComponent<ARTrackedImageManager>();
 
         if(trackedImageManager.subsystem == null)
             Logger.Instance.LogWarning($"Image tracking is NOT supported :(");
