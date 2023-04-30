@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 4648845382885222164
+  m_GuidHigh: 13974677121408498324
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5047114064928972253
+      m_GuidHigh: 391710298878834338
+    m_SerializedTextureGuid:
+      m_GuidLow: 9904580763913804688
+      m_GuidHigh: 13725697248598712296
+    m_Size: {x: 0.13758333, y: 0.07725833}
+    m_SpecifySize: 1
+    m_Name: UnityLogo
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4846638650839865120
+      m_GuidHigh: 7668366801806249403
+    m_SerializedTextureGuid:
+      m_GuidLow: 1870400693059192815
+      m_GuidHigh: 10559539584282120408
+    m_Size: {x: 0.1375833, y: 0.1375833}
+    m_SpecifySize: 1
+    m_Name: LegoLogo
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5455884446264024908
+      m_GuidHigh: 5443173219356280505
+    m_SerializedTextureGuid:
+      m_GuidLow: 3068292446062640755
+      m_GuidHigh: 6121219210842912938
+    m_Size: {x: 0.1375833, y: 0.045772906}
+    m_SpecifySize: 1
+    m_Name: LearnXRLogo
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4722417345692357668
+      m_GuidHigh: 1461935252015255181
+    m_SerializedTextureGuid:
+      m_GuidLow: 6053970936567902480
+      m_GuidHigh: 14432851271206027098
+    m_Size: {x: 0.079375, y: 0.079375}
+    m_SpecifySize: 1
+    m_Name: QRCode
+    m_Texture: {fileID: 0}

@@ -20,9 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARRaycasts.unity
     guid: 253ba7786d1fb7e419cf09810402f0c5
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AROcclusion.unity
     guid: 46d32a9608b97534aad5da8943b48225
+  - enabled: 1
+    path: Assets/Scenes/ARImageTracking/ARImageTrackingSimple.unity
+    guid: 6da669d4a0c307d43813d6be800d38af
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c3eb4e410569e5444955fd65d12702e2, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ba5b8cec7586e1449a22192ae6808910, type: 2}
