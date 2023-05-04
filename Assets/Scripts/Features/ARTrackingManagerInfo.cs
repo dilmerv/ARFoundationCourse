@@ -8,6 +8,9 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
     [SerializeField]
     private GameObject[] objectsToInstantiate;
 
+    [SerializeField]
+    private bool allowRemovalUponLimitedTracking = false;
+
     private ARTrackedImageManager trackedImageManager;
 
     private void Awake()
@@ -55,7 +58,6 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
 
         foreach (var trackedImage in trackImageEventArgs.updated)
         {
-            Logger.Instance.LogInfo($"New image updated: {trackedImage.trackableId}");
             UpdateTrackingInfo(trackedImage);
         }
     }
@@ -63,7 +65,8 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
     private void UpdateTrackingInfo(ARTrackedImage trackedImage, bool addContent = false)
     {
         // get the UI game object
-        var ui = trackedImage.transform.GetComponentInChildren<Canvas>();
+        var ui = trackedImage.transform.GetComponentInChildren<Canvas>(true);
+        ui.gameObject.SetActive(true);
 
         // get text boxes
         var imageTextBoxes = ui.GetComponentsInChildren<TextMeshProUGUI>();
@@ -84,12 +87,14 @@ public class ARTrackedImageManagerInfo : MonoBehaviour
         var contentArea = trackedImage.transform.GetChild(1);
         if(contentArea != null && objectsToInstantiate?.Length > 0) 
         {
-            var imageContent = contentArea.GetComponent<ARTrackedImageContent>();
+            var imageContent = contentArea.GetComponent<ARTrackedImageContentWithLimit>();
             if(!imageContent.ContentAdded) 
             {
                 Instantiate(objectsToInstantiate[Random.Range(0, objectsToInstantiate.Length - 1)],
                     contentArea.transform);
                 imageContent.ContentAdded = true;
+                imageContent.TrackedImage = trackedImage;
+                imageContent.EnableThisFeature = allowRemovalUponLimitedTracking;
             }
         }
     }

@@ -1,25 +1,38 @@
 ﻿
 using UnityEngine.XR.ARFoundation;
 using UnityEngine;
+using UnityEngine.XR.ARSubsystems;
 
 public class ARTrackedImageContentWithLimit : ARTrackedImageContent
 {
     [SerializeField]
     private float removeAfterSecondsOfLimitedTracking = 3.0f;
 
-    public ARTrackedImage ARTrackedImage { get; set; }
+    public ARTrackedImage TrackedImage { get; set; }
 
+    public bool EnableThisFeature { get; set; }
+
+    
     private float timeToLive;
 
     private void Update()
     {
-        if (ContentAdded && ARTrackedImage != null && ARTrackedImage.referenceImage.guid != null)
+        if (!EnableThisFeature) return;
+
+        if (ContentAdded && TrackedImage != null && TrackedImage.referenceImage.guid != null)
         {
-            if (ARTrackedImage.trackingState == UnityEngine.XR.ARSubsystems.TrackingState.Limited)
+            if (TrackedImage.trackingState == TrackingState.Limited)
             {
                 if (timeToLive >= removeAfterSecondsOfLimitedTracking)
                 {
-                    var contentArea = ARTrackedImage.transform.GetChild(1);
+                    Logger.Instance.LogInfo("Deleting content on trackable");
+                    
+                    // hide the UI upon deletion
+                    var ui = TrackedImage.transform.GetChild(0);
+                    ui.gameObject.SetActive(false);
+
+                    // delete content (3d models, animations, etc)
+                    var contentArea = TrackedImage.transform.GetChild(1);
                     foreach (Transform content in contentArea.transform)
                     {
                         Destroy(content.gameObject);
