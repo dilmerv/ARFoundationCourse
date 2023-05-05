@@ -18,6 +18,7 @@ AR Foundation course supplemental source code examples and MVP project.
 * ARCameraAndLighting: learn to use AR Camera features and how to affect 3D objects with real world lighting conditions.
 * AROcclusion: an introduction to occlusion with the AR Occlusion Manager.
 * ARImageTrackingSimple: this demo shows you how to use image tracking features with a variety of images and how to display image information at runtime.
+* ARImageTrackingComplex: this demo is based on "ARImageTrackingSimple" but with additional features to auto remove content after x amount of time.
   
 📚 Demo Scenes (In Progress)
 
