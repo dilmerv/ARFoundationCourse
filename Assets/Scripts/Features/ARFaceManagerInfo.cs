@@ -7,14 +7,14 @@ public class ARFaceManagerInfo : MonoBehaviour
 {
     private ARFaceManager faceManager;
 
-    private void Start()
+    private void Awake()
     {
         faceManager = GetComponent<ARFaceManager>();
     }
 
     private void OnEnable()
     {
-        faceManager.facesChanged += FacesChanged;    
+        faceManager.facesChanged += FacesChanged;
     }
 
     private void OnDisable()
@@ -24,7 +24,9 @@ public class ARFaceManagerInfo : MonoBehaviour
 
     private void FacesChanged(ARFacesChangedEventArgs facesChangedEventArgs)
     {
-        foreach(ARFace face in facesChangedEventArgs.added) 
+        Logger.Instance.LogInfo("Executed");
+
+        foreach (ARFace face in facesChangedEventArgs.added) 
         {
             Logger.Instance.LogInfo($"Face added with trackableId: {face.trackableId} | vertices: {face.vertices.Count()}");
         }
