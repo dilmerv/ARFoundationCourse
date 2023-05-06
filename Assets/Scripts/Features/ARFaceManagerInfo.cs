@@ -24,8 +24,6 @@ public class ARFaceManagerInfo : MonoBehaviour
 
     private void FacesChanged(ARFacesChangedEventArgs facesChangedEventArgs)
     {
-        Logger.Instance.LogInfo("Executed");
-
         foreach (ARFace face in facesChangedEventArgs.added) 
         {
             Logger.Instance.LogInfo($"Face added with trackableId: {face.trackableId} | vertices: {face.vertices.Count()}");
