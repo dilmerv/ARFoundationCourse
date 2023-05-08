@@ -17,6 +17,8 @@ public class AREyesVisualizer : MonoBehaviour
 
     private GameObject rightEye;
 
+    private void Awake() => eyeInfo.text = string.Empty;
+
     void Start()
     {
         faceManager = FindAnyObjectByType<ARFaceManager>();
@@ -60,6 +62,7 @@ public class AREyesVisualizer : MonoBehaviour
             Logger.Instance.LogInfo($"Right Eye created");
         }
 
-        eyeInfo.text = $"Left Eye Transform: {leftEye}\nRight Eye Transform: {rightEye}";
+        eyeInfo.text = $"Left Eye POS/ROT: {leftEye.transform.position}|{leftEye.transform.rotation}\n" +
+            $"Right Eye POS/ROT: {rightEye.transform.position}|{rightEye.transform.rotation}";
     }
 }
