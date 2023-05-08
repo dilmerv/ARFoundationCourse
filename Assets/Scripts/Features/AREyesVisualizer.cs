@@ -17,13 +17,15 @@ public class AREyesVisualizer : MonoBehaviour
 
     private GameObject rightEye;
 
-    private void Awake() => eyeInfo.text = string.Empty;
+    private void Awake()
+    {
+        eyeInfo = GameObject.Find("UI").GetComponentInChildren<TextMeshProUGUI>();
+        eyeInfo.text = string.Empty;
+    }
 
     void Start()
     {
         faceManager = FindAnyObjectByType<ARFaceManager>();
-        eyeInfo = GameObject.Find("UI").GetComponentInChildren<TextMeshProUGUI>();
-
         face = GetComponent<ARFace>();
         face.updated += FaceUpdated;
 
