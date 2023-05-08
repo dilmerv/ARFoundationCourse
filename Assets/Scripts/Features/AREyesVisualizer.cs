@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
@@ -5,6 +6,8 @@ public class AREyesVisualizer : MonoBehaviour
 {
     [SerializeField]
     private GameObject eyesPrefab;
+
+    private TextMeshProUGUI eyeInfo;
 
     private ARFaceManager faceManager;
 
@@ -17,6 +20,8 @@ public class AREyesVisualizer : MonoBehaviour
     void Start()
     {
         faceManager = FindAnyObjectByType<ARFaceManager>();
+        eyeInfo = GameObject.Find("UI").GetComponentInChildren<TextMeshProUGUI>();
+
         face = GetComponent<ARFace>();
         face.updated += FaceUpdated;
 
@@ -54,5 +59,7 @@ public class AREyesVisualizer : MonoBehaviour
             rightEye = Instantiate(eyesPrefab, faceUpdatedEventArgs.face.rightEye);
             Logger.Instance.LogInfo($"Right Eye created");
         }
+
+        eyeInfo.text = $"Left Eye Transform: {leftEye}\nRight Eye Transform: {rightEye}";
     }
 }
