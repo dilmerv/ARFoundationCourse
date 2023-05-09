@@ -32,9 +32,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ARFaceTracking/ARFaceTrackingSimple.unity
     guid: 27af440c3589b5845892b9c745e12ae8
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ARFaceTracking/AREyeTrackingSimple.unity
     guid: 944710cc8c92241efb1fae105d23e872
+  - enabled: 1
+    path: Assets/Scenes/ARMeshingAndClassifications.unity
+    guid: 343580aef6e4204448d0506a399f9036
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c3eb4e410569e5444955fd65d12702e2, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ba5b8cec7586e1449a22192ae6808910, type: 2}

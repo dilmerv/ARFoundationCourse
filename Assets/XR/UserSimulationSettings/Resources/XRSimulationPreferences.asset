@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f528b98f844ed8b6b2d5fdf90b40e6, type: 3}
   m_Name: XRSimulationPreferences
   m_EditorClassIdentifier: 
-  m_EnvironmentPrefab: {fileID: 7576867131100388943, guid: d95217e534731d7468a89e993760d0c1, type: 3}
+  m_EnvironmentPrefab: {fileID: 8677927400399922054, guid: 4791a2d5e313f354eb6b1bf6902529d2, type: 3}
   m_FallbackEnvironmentPrefab: {fileID: 7576867131100388943, guid: c7b92c392902f4043a03a64032c02fe1, type: 3}
   m_EnableNavigation: 1
