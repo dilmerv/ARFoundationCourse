@@ -39,6 +39,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ARMeshingAndClassifications.unity
     guid: 343580aef6e4204448d0506a399f9036
   m_configObjects:
+    AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: 0f171c413e0604b7d820c9110241cee9, type: 2}
+    AR Foundation RemoteARFoundationRemoteSessionRecordsData: {fileID: 11400000, guid: 66c8c7dd286de49ff87d16e1a1f400c0, type: 2}
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: c3eb4e410569e5444955fd65d12702e2, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: ba5b8cec7586e1449a22192ae6808910, type: 2}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a707462a4fc736b409ab6e964996560b, type: 2}

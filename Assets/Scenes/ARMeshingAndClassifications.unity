@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_Sun: {fileID: 621647361}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 968053edfd89749c48f4ea5d444abf64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MeshPrefab: {fileID: 4076210148695127004, guid: d3c3c344b6829a04ab2993d35995ec74, type: 3}
+  m_MeshPrefab: {fileID: 5880179105329892965, guid: d3c3c344b6829a04ab2993d35995ec74, type: 3}
   m_Density: 0.5
   m_Normals: 1
   m_Tangents: 0
@@ -306,6 +306,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fa1f6dfb9b7cd94593fda174f027145, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enableClassification: 1
+  logClassifications: 1
+  objectToAttachToVertices: {fileID: 2839034755402273193, guid: 45db23afe425f4ab18b84ff7e085fc9c, type: 3}
+  layersToInclude:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &621647360
 GameObject:
   m_ObjectHideFlags: 0
@@ -457,12 +463,12 @@ MonoBehaviour:
       m_Name: Position
       m_Type: 0
       m_ExpectedControlType: Vector3
-      m_Id: 
+      m_Id: aa5019cd-4f3b-4a6a-9cfd-1286f535eba7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: 2e3369fb-d82f-46b3-b363-006088be2ae4
         m_Path: <XRHMD>/centerEyePosition
         m_Interactions: 
         m_Processors: 
@@ -485,12 +491,12 @@ MonoBehaviour:
       m_Name: Rotation
       m_Type: 0
       m_ExpectedControlType: Quaternion
-      m_Id: 
+      m_Id: 080b1116-a0f3-4304-9a76-c4c31d659684
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 
+        m_Id: d3c88699-da52-497f-a1b1-700cd30fa6a2
         m_Path: <XRHMD>/centerEyeRotation
         m_Interactions: 
         m_Processors: 
@@ -513,7 +519,7 @@ MonoBehaviour:
       m_Name: Tracking State
       m_Type: 0
       m_ExpectedControlType: Integer
-      m_Id: 
+      m_Id: 727c2a3c-3c95-432a-b91f-265c7dba1ee8
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
