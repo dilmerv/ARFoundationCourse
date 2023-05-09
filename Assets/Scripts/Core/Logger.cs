@@ -6,7 +6,6 @@ using System;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(EventSystem))]
 public class Logger : Singleton<Logger>
 {
     [SerializeField]
