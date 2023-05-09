@@ -577,7 +577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c72df16e639d2804fbcbd14354d3a843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ARCamera: {fileID: 0}
+  m_ARCamera: {fileID: 975220128}
   m_HumanBodyManager: {fileID: 1400098874}
   m_LineRendererPrefab: {fileID: 1780351997603834617, guid: 57558c833826c5f468608202c42c282b, type: 3}
 --- !u!1001 &992012703
