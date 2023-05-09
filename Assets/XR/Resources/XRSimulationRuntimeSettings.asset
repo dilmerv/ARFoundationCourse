@@ -21,7 +21,7 @@ MonoBehaviour:
     m_MaximumHitDistance: 12
     m_MinimumHitDistance: 0.05
   m_PlaneFindingParams:
-    m_MinimumPlaneUpdateTime: 0.13
+    m_MinimumPlaneUpdateTime: 0.05
     m_MinPointsPerSqMeter: 30
     m_MinSideLength: 0.11
     m_InLayerMergeDistance: 0.2

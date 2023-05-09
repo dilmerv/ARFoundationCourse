@@ -10,6 +10,7 @@
     "com.unity.timeline": "1.7.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.8.0",
+    "com.unity.xr-content.xr-sim-environments": "file:../ContentPackages\\com.unity.xr-content.xr-sim-environments-1.0.0.tgz",
     "com.unity.xr.arcore": "5.1.0-pre.4",
     "com.unity.xr.arfoundation": "5.1.0-pre.4",
     "com.unity.xr.arkit": "5.1.0-pre.4",
