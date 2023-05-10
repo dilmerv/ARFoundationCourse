@@ -21,12 +21,12 @@ AR Foundation course supplemental source code examples and MVP project.
 * ARImageTrackingComplex: this demo is based on "ARImageTrackingSimple" but with additional features to auto remove content after x amount of time.
 * ARFaceTrackingSimple: demonstrates how to use face tracking meshing capabilities with standard materials.
 * AREyeTrackingSimple: this scene demonstrates how to use eye tracking features with iOS or any other device which supports it.
+* ARBodyTracking2D: body tracking demo which uses Pose 2D from AR Human Body Manager with a line renderer for each joint.
+* ARBodyTracking3D: body tracking demo which uses Pose 3D from AR Human Body Manager with a robot.
+* ARMeshingAndClassifications: demo showcasing how to use AR Meshing Manager to generates meshes in real-time and how to get classifications.
 
 📚 Demo Scenes (In Progress)
 
 * ARFaceTrackingWithBlendShapes
-* ARBodyTracking3D
-* ARBodyTracking2D
-* ARMeshing
 * ARAnchorManagement
 * ARMVPDemo
