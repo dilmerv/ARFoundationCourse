@@ -17,7 +17,7 @@ public class AROcclusionSupport : MonoBehaviour
         arOcclusionManager = GetComponent<AROcclusionManager>();
         List<string> unsupportedAreas = new List<string>();
 
-        bool notSupported = arOcclusionManager.descriptor == null;
+        bool notSupported = arOcclusionManager.subsystem == null;
 
         if (notSupported || arOcclusionManager.descriptor?.environmentDepthConfidenceImageSupported == Supported.Unsupported)
             unsupportedAreas.Add("DepthConfidenceImage");
