@@ -1,0 +1,1 @@
+Credits to Unity https://github.com/Unity-Technologies/arfoundation-samples/ which provides examples for all things in AR as well as body tracking scripts included.
