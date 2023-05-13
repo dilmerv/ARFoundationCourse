@@ -1,15 +1,14 @@
-using UnityEngine;
-using UnityEngine.XR.ARFoundation;
-using UnityEngine.XR.ARSubsystems;
-using UnityEngine.XR.ARKit;
 using System.Collections.Generic;
 using Unity.Collections;
+using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARKit;
+using UnityEngine.XR.ARSubsystems;
 
-[RequireComponent(typeof(ARFace))]
-public class ARFaceBlendshapesMapper : MonoBehaviour
+public class ARFaceBlendShapesMapper : MonoBehaviour
 {
     [SerializeField]
-    private ARFaceBlendshapesMapping blendshapesMapping = null;
+    private ARFaceBlendShapesMapping blendShapesMapping = null;
 
     [SerializeField]
     private SkinnedMeshRenderer skinnedMeshRenderer = null;
@@ -22,27 +21,40 @@ public class ARFaceBlendshapesMapper : MonoBehaviour
 
     void Awake()
     {
-        face = GetComponent<ARFace>();
+        face = GetComponentInParent<ARFace>();
+    }
+
+    private void Start()
+    {
         CreateFeatureBlendMapping();
     }
 
     void CreateFeatureBlendMapping()
     {
-        if (skinnedMeshRenderer == null || skinnedMeshRenderer.sharedMesh == null)
+        Logger.Instance.LogInfo($"CreateFeatureBlendMapping started");
+        if (skinnedMeshRenderer == null || skinnedMeshRenderer?.sharedMesh == null)
         {
+            Logger.Instance.LogError("CreateFeatureBlendMapping skinnedMeshRenderer reference is missing");
             return;
         }
 
-        if (blendshapesMapping.mappings == null || blendshapesMapping.mappings.Count == 0)
+        if (blendShapesMapping.mappings == null || blendShapesMapping.mappings.Count == 0)
         {
-            Debug.LogError("Mappings must be configured before using BlendShapeVisualizer...");
+            Logger.Instance.LogError("Mappings must be configured before using BlendShapeVisualizer");
             return;
         }
 
-        foreach (Mapping mapping in blendshapesMapping.mappings)
+        foreach (Mapping mapping in blendShapesMapping.mappings)
         {
-            faceArkitBlendShapeIndexMap[mapping.location] = skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex(mapping.name);
+            var blendShapeIndex = skinnedMeshRenderer.sharedMesh.GetBlendShapeIndex(mapping.name);
+            if (blendShapeIndex == -1)
+            {
+                Logger.Instance.LogWarning($"BlendShape mapping.name: {mapping.name} was not found in mesh");
+                continue;
+            }
+            faceArkitBlendShapeIndexMap.Add(mapping.location, blendShapeIndex);
         }
+        Logger.Instance.LogInfo($"CreateFeatureBlendMapping completed mapping blendShapes");
     }
 
     void SetVisible(bool visible)
@@ -51,7 +63,7 @@ public class ARFaceBlendshapesMapper : MonoBehaviour
 
         skinnedMeshRenderer.enabled = visible;
     }
-
+        
     void UpdateVisibility()
     {
         var visible = enabled && (face.trackingState == TrackingState.Tracking) && (ARSession.state > ARSessionState.Ready);
@@ -62,9 +74,9 @@ public class ARFaceBlendshapesMapper : MonoBehaviour
     {
         var faceManager = FindObjectOfType<ARFaceManager>();
 
-        if (faceManager != null && faceManager?.subsystem != null)
+        if (faceManager != null)
         {
-            arKitFaceSubsystem = (ARKitFaceSubsystem)faceManager?.subsystem;
+            arKitFaceSubsystem = (ARKitFaceSubsystem)faceManager.subsystem;
         }
 
         UpdateVisibility();
@@ -106,7 +118,7 @@ public class ARFaceBlendshapesMapper : MonoBehaviour
                 {
                     if (mappedBlendShapeIndex >= 0)
                     {
-                        skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * blendshapesMapping.coefficientScale);
+                        skinnedMeshRenderer.SetBlendShapeWeight(mappedBlendShapeIndex, featureCoefficient.coefficient * blendShapesMapping.coefficientScale);
                     }
                 }
             }

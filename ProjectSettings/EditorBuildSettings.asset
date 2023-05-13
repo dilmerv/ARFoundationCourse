@@ -42,7 +42,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ARSystemDescriptors.unity
     guid: f5bd87c5d0825bd4a8f75b5cf746c263
   - enabled: 1
-    path: Assets/Scenes/ARFaceTracking/ARFaceTrackingWithBlendshapes.unity
+    path: Assets/Scenes/ARFaceTracking/ARFaceTrackingWithBlendShapes.unity
     guid: bdff6313b15864642b025fe4f61e974c
   m_configObjects:
     AR Foundation RemoteARFoundationRemoteLoaderSettings: {fileID: 11400000, guid: 0f171c413e0604b7d820c9110241cee9, type: 2}

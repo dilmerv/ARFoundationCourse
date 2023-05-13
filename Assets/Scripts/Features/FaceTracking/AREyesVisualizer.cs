@@ -19,7 +19,7 @@ public class AREyesVisualizer : MonoBehaviour
 
     private void Awake()
     {
-        eyeInfo = GameObject.Find("UI").GetComponentInChildren<TextMeshProUGUI>();
+        eyeInfo = GameObject.Find("DebugEyesUI").GetComponentInChildren<TextMeshProUGUI>();
         eyeInfo.text = string.Empty;
     }
 

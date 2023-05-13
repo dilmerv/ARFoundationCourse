@@ -10,8 +10,8 @@ public class Mapping
     public string name;
 }
 
-[CreateAssetMenu(fileName = "ARFaceBlendshapesMapping", menuName = "ARFaceTools/Mappings", order = 1)]
-public class ARFaceBlendshapesMapping : ScriptableObject
+[CreateAssetMenu(fileName = "ARFaceBlendShapesMapping", menuName = "AR Face Tracking Tools/Create Blend Shape Mapping", order = 1)]
+public class ARFaceBlendShapesMapping : ScriptableObject
 {
 
     public float coefficientScale = 100.0f;
@@ -22,7 +22,7 @@ public class ARFaceBlendshapesMapping : ScriptableObject
 
         new Mapping { location = ARKitBlendShapeLocation.BrowDownLeft, name = "browDown_L" },
         new Mapping { location = ARKitBlendShapeLocation.BrowDownRight , name = "browDown_R" },
-        new Mapping { location = ARKitBlendShapeLocation.BrowInnerUp , name = "brownInnerUp" },
+        new Mapping { location = ARKitBlendShapeLocation.BrowInnerUp , name = "browInnerUp" },
         new Mapping { location = ARKitBlendShapeLocation.BrowOuterUpLeft , name = "browOuterUp_L" },
         new Mapping { location = ARKitBlendShapeLocation.BrowOuterUpRight , name = "browOuterUp_R" },
         new Mapping { location = ARKitBlendShapeLocation.CheekPuff , name = "cheekPuff" },

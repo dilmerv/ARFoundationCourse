@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 127dbe20e90a84a01ac0fd3bf9180aed, type: 3}
-  m_Name: ARFaceBlendshapesMapping
+  m_Name: ARFaceBlendShapesMapping
   m_EditorClassIdentifier: 
   coefficientScale: 100
   mappings:
@@ -19,7 +19,7 @@ MonoBehaviour:
   - location: 1
     name: browDown_R
   - location: 2
-    name: brownInnerUp
+    name: browInnerUp
   - location: 3
     name: browOuterUp_L
   - location: 4
