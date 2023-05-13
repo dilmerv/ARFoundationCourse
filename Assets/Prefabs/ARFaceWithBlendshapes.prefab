@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!137 &8878830111304522949
 SkinnedMeshRenderer:
@@ -150,5 +150,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0ed18e0ecd94db38f4ec73499b3984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blendshapesMapping: {fileID: 11400000, guid: ec0a514074e2d4ee3ad7b9101ddc894d, type: 2}
+  blendShapesMapping: {fileID: 11400000, guid: 317bdd83782ea40948c2117a16ddcd40, type: 2}
   skinnedMeshRenderer: {fileID: 8878830111304522949}
