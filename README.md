@@ -1,5 +1,5 @@
 # ARFoundationCourse
-AR Foundation course supplemental source code examples and MVP project.
+AR Foundation course supplemental source code examples.
 
 💡 What is included in this repo?
 
