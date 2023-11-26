@@ -29,7 +29,5 @@ AR Foundation course supplemental source code examples.
 
 * ARFaceTrackingWithBlendShapes
 * ARAnchorManagement
-* ARMVPDemo
-
 
 📢 Big HUGE thanks to the Unity team for providing great AR Foundation examples in which I've used as research and studies over the years. Check out their [amazing repo here!](https://github.com/Unity-Technologies/arfoundation-samples/)
